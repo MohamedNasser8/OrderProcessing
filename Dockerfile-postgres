@@ -1,5 +1,0 @@
-FROM postgres:latest
-
-# Set environment variables (optional)
-ENV POSTGRES_PASSWORD=mohamednasserh
-ENV POSTGRES_DB=stock-management

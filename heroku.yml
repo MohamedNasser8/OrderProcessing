@@ -1,9 +1,0 @@
-build:
-  dockerfile: Dockerfile
-
-web:
-  command: gunicorn app:app
-  env:
-    DATABASE_URL: postgres://postgres:mohamednasserh@<host_name>:<port>/<database_name>
-
-postgres:  # Remove this section (not needed with Heroku Postgres)

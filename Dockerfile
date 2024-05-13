@@ -13,5 +13,7 @@ COPY . .
 EXPOSE 80
 
 # Define environment variable
+ENV DATABASE_URL = postgresql://postgres:mohamednasserh@localhost:5432/stock-management
+
 # Run app.py when the container launches
 CMD ["python", "app.py"]
