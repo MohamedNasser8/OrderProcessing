@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  flask_app:
+    build: .  # Build the image from the current directory
+    ports:
+      - "5000:5000"  # Map Flask app port (5000) to host port (5000)
+    environment:
+      DATABASE_URL: postgresql://postgres:mohamednasserh@postgres:5432/stock-management
+  postgres:
+    image: postgres  # Use the official Postgres image
+    environment:
+      POSTGRES_PASSWORD: mohamednasserh  # Set the Postgres password
+      POSTGRES_DB: stock-management
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist Postgres data
+
+volumes:
+  postgres_data:  # Define a volume to persist Postgres data

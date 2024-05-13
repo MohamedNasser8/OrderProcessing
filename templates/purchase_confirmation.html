@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase Confirmation</title>
+</head>
+<body>
+    <p>Hello,</p>
+    <p>Your purchase was successful. Here are the details:</p>
+    <ul>
+        {% for detail in order_details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total Amount: ${{ total_amount }}</p>
+    <p>Thank you for your purchase!</p>
+</body>
+</html>
