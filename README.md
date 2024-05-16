@@ -7,19 +7,22 @@ The Order Processing System is designed to streamline the management of customer
 
 To get the Order Processing System up and running, follow these steps:
 
-    1.Clone this Repo.
-    
-    2.Ensure you have Python installed on your system. This project requires Python 3.6 or later.
-    
-    3.Set up a virtual environment: python3 -m venv venv
+1. Clone this Repo.
 
-    3. Activate the virtual environment:
+2. Ensure you have Python installed on your system. This project requires Python 3.6 or later.
+
+3. Set up a virtual environment: python3 -m venv venv
+
+4. Activate the virtual environment:
+````
 - On Windows: `venv\Scripts\activate`
 - On Unix or MacOS: `source venv/bin/activate`
+````
+5. Install the required packages:
 
-4. Install the required packages:
-
-    pip install -r requirements.txt
+```
+- pip install -r requirements.txt
+```
 
 
 ## Environment Setup
@@ -40,11 +43,11 @@ Flask run
 
 ## Docker Setup
 
-Our application is containerized for easy setup and deployment. You can pull the Docker image from Docker Hub and run the app on your local machine with the following commands:
+My application is containerized for easy setup and deployment. You can pull the Docker image from Docker Hub and run the app on your local machine with the following commands:
 
 1. Pull the Docker image:
 
-    `docker pull nassermohamed3222/flask_order:latest`
+    `docker pull nassermohamed3222/flask_order`
 
 
 2. Run the Docker container:
@@ -52,10 +55,10 @@ Our application is containerized for easy setup and deployment. You can pull the
     `docker run -d -p 5000:5000 --env-file .env nassermohamed3222/flask_order`
 
 
-Make sure you have Docker installed on your system and that you've created a `.env` file with all the necessary environment variables as mentioned in the Environment Setup section.
-
-After running the container, the application should be accessible on `http://localhost:5000/`.
-
+* Make sure you have Docker installed on your system.
+* After running the container, the application should be accessible on `http://localhost:5000`.
+* You should make sure postgres installed if not you can create postgres container using docker-compose file,
+* Be certain to set your password, username and database correctly.
 
 ## Deployment and API Documentation
 
@@ -64,3 +67,4 @@ After running the container, the application should be accessible on `http://loc
 - **Admin Credentials**:
     - Email: `q@gmail.com`
     - Password: `123456`
+- You can use admin credentials to add products as illustrated in docs.
