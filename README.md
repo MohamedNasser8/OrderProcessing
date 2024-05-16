@@ -58,7 +58,9 @@ My application is containerized for easy setup and deployment. You can pull the 
 * Make sure you have Docker installed on your system.
 * After running the container, the application should be accessible on `http://localhost:5000`.
 * You should make sure postgres installed if not you can create postgres container using docker-compose file,
-* Be certain to set your password, username and database correctly.
+* Be certain to set your password, username and database correctly using:
+
+    `docker compose up`
 
 ## Deployment and API Documentation
 
